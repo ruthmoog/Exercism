@@ -1,6 +1,5 @@
 module Gigasecond
-    def self.from(birth)
-        t = 1000000000
-        birth + t 
+    def self.from(time)
+        time + 10**9
     end
 end 
