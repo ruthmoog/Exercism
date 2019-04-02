@@ -1,18 +1,15 @@
 class Complement
   def self.of_dna(sequence)
+    transcription = {
+      "G" => "C",
+      "C" => "G",
+      "T" => "A",
+      "A" => "U",
+      "" => ""
+    }
     my_sequence = ""
     sequence.to_s.each_char do |char|
-      if char == "C"
-        my_sequence += "G" 
-      elsif char == "G"
-        my_sequence += "C" 
-      elsif char == "T"
-        my_sequence += "A"
-      elsif char == "A"
-        my_sequence += "U" 
-      else
-        my_sequence = sequence.to_s
-      end
+       my_sequence += transcription[char]
     end
     my_sequence
   end
